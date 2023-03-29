@@ -6,7 +6,7 @@ class OpenAIWrapper:
 
     def __init__(self):
         print("initialising openAI")
-        openai.api_key = "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"  # os.getenv("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")
+        openai.api_key = os.getenv("aikey")
 
     def ask(self, text):
         result= openai.Completion.create(model="text-davinci-003", prompt=text, temperature=0,

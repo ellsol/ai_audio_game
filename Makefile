@@ -3,6 +3,14 @@
 .SILENT: run
 .PHONY: run
 
+
+
+
+ifneq (,$(wildcard ./.local.env))
+    include .local.env
+    export
+endif
+
 run:
 	python3 main.py
 
